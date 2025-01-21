@@ -192,6 +192,7 @@ h1 {
 .restaurants {
     padding-left: 17px;
     padding-right: 17px;
+    padding-bottom: 60px;
     background-color: $background-color-grey;
     display: flex;
     flex-direction: column;
@@ -200,18 +201,21 @@ h1 {
             padding-left: 3px;
             margin: 0px;
             padding-top: 40px;
-            padding-bottom: 25px;
         }
         img {
             width: 100%;
-            border-radius: 15px;
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px;
             object-fit: cover;
+            height: 180px;
         }
 }
 
 .restaurant__cards {
     display: flex;
     flex-direction: column;
+    @include shadow-main(10);
+    border-radius: 15px;
 }
 
 .restaurant__cards__display {
@@ -220,27 +224,83 @@ h1 {
     gap: 17px;
 }
 
-.restaurant__text {
-    display: flex;
-    justify-content: space-between;
-}
-
-.restaurant__icons {
-    @include display-flex;
-}
-
 .restaurant__cards__nouveau {
     position: relative;
 }
 
 .restaurant__nouveau {
     position: absolute; 
-      top: 13px; 
-      left: 250px; 
+      top: 4%; 
+      right: 4%; 
       background-color: #99E2D0; 
       color: #008766; 
       padding: 5px 10px; 
       font-size: 14px; 
       border-radius: 5px; 
       font-weight: bold;
+}
+
+.restaurant__text {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+}
+
+.restaurant__text__display {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.restaurant__icons {
+    @include display-flex;
+        i {
+            font-size: 20px;
+        }
+}
+// Footer
+
+footer {
+    background-color: $color-text;
+    padding-top: 22px;
+    padding-right: 25px;
+    padding-bottom: 22px;
+    padding-left: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+            p {
+            color: #FFFFFF;
+        }
+            a {
+                color: #F6F6F6;
+                text-decoration: none;
+            }
+}
+
+footer img {
+    width: 137px;
+    height: 27px;
+}
+
+.footer__food {
+    font-family: 'Shrikhand',sans-serif;
+    font-size: 18px;
+    color: #FFFFFF;
+}
+
+.footer__icon {
+    display: flex;
+    gap: 5px;
+}
+
+.footer__icon__color {
+    color: #F6F6F6;
+}
+
+.footer__text {
+    padding-left: 7px;
 }
