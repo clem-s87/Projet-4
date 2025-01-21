@@ -4,17 +4,33 @@ body {
     margin: 0px;
 }
 
-.title {
+h1, h2 {
     font-size: 24px;
 }
 
- .sub__title{
+.sub__title{
     font-size: 18px;
  }
 
  .text {
     font-size: 16px;
  }
+
+ h2 {
+    margin-top: 40px;
+}
+
+h3, p {
+    margin: 0px;
+}
+
+ .main-container {
+    display: flex;
+    flex-direction: column;
+}
+
+// VARIABLE MIXIN
+
 
 //  couleurs
 
@@ -23,24 +39,36 @@ $second-gradient: linear-gradient(#FF79DA,#9356DC);
 
 $color-text: #353535;
 
+$background-color-grey: #F6F6F6;
+
+$color-icons: #7E7E7E;
+
+// display flex centré
+
+@mixin display-flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 // ombre
 
-@mixin shadow-main {
-    box-shadow: 0px,4px,15px,#00000026;
+@mixin shadow-main ($opacity) {
+    $x: 0px;            
+    $y: 4px;            
+    $blur: 15px;        
+    $spread: 0px;       
+    $color: rgba(0, 0, 0, 1);
+    $calculated-opacity: $opacity / 100;
+    box-shadow: $x $y $blur $spread rgba(0, 0, 0, $calculated-opacity);
 }
 
-.main-container {
-    display: flex;
-    flex-direction: column;
-}
 
 
 //  header
 
 .header-logo {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include display-flex;
     height: 69px;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
     position: relative;
@@ -52,8 +80,7 @@ $color-text: #353535;
 }
 
 nav {
-    display: flex;
-    justify-content: center;
+    @include display-flex;
     width: 100%;
     height: 50px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -61,9 +88,8 @@ nav {
     position: relative;
     z-index: 1;
         .nav__form {
-            display: flex;
+            @include display-flex;
             gap: 17px;
-            align-items: center;
                 .nav__form__recherche {
                     border: none;
                     background-color: #EAEAEA;
@@ -81,12 +107,15 @@ nav {
 
 h1 {
     margin-bottom: 10px;
+    margin-left: 60px;
+    margin-right: 60px;
 }
 .sous-header {
     text-align: center;
     position: relative;
     z-index: 0;
-    background-color: #FAFAFA;
+    background-color: $background-color-grey;
+    height: 270px;
     p {
         color: $color-text;
         margin: 0px;
@@ -94,9 +123,7 @@ h1 {
 }
 
 .sous-header__bouton1 {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include display-flex;
     padding-top: 30px;
     padding-bottom: 30px;
 }
@@ -105,12 +132,115 @@ h1 {
     background: $second-gradient;
     border-radius: 25px;
     height: 50px;
-    display: flex;
-    align-items: center;
+    @include display-flex;
     color: #FFFFFF;
     text-decoration: none;
-    justify-content: center;
     width: 218px;
     
 }
 
+// fonctionnement
+
+.fonctionnement {
+    display: flex;
+    flex-direction: column;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 50px;
+}
+
+.fonctionnement__display {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.fonctionnement__bouton {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 30px;
+    background-color: $background-color-grey;
+    border-radius: 20px;
+    @include shadow-main(15);
+        i {
+            @include display-flex;
+        }
+        p {
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+}
+
+.fonctionnement__numero {
+    width: 24px;
+    height: 24px;
+    border-radius: 100%;
+    background-color: #9356DC;
+    color: white;
+}
+.icons2 {
+    color: #9356DC;
+}
+
+.icons1 {
+    color: $color-icons;
+}
+
+// Restaurants
+
+.restaurants {
+    padding-left: 17px;
+    padding-right: 17px;
+    background-color: $background-color-grey;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+        h2 {
+            padding-left: 3px;
+            margin: 0px;
+            padding-top: 40px;
+            padding-bottom: 25px;
+        }
+        img {
+            width: 100%;
+            border-radius: 15px;
+            object-fit: cover;
+        }
+}
+
+.restaurant__cards {
+    display: flex;
+    flex-direction: column;
+}
+
+.restaurant__cards__display {
+    display: flex;
+    flex-direction: column;
+    gap: 17px;
+}
+
+.restaurant__text {
+    display: flex;
+    justify-content: space-between;
+}
+
+.restaurant__icons {
+    @include display-flex;
+}
+
+.restaurant__cards__nouveau {
+    position: relative;
+}
+
+.restaurant__nouveau {
+    position: absolute; 
+      top: 13px; 
+      left: 250px; 
+      background-color: #99E2D0; 
+      color: #008766; 
+      padding: 5px 10px; 
+      font-size: 14px; 
+      border-radius: 5px; 
+      font-weight: bold;
+}
