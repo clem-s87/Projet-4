@@ -119,6 +119,7 @@ h1 {
   display: flex;
   flex-direction: column;
   gap: 20px;
+  padding-left: 15px;
 }
 
 .fonctionnement__bouton {
@@ -138,6 +139,12 @@ h1 {
 .fonctionnement__bouton p {
   padding-top: 20px;
   padding-bottom: 20px;
+}
+
+.fonctionnement__numero__pos {
+  position: relative;
+  left: -10px;
+  top: 0px;
 }
 
 .fonctionnement__numero {
@@ -229,6 +236,39 @@ h1 {
 }
 .restaurant__icons i {
   font-size: 20px;
+}
+
+.heart-input {
+  display: none;
+}
+
+.heart {
+  cursor: pointer;
+  display: inline-block;
+}
+
+.fa-solid.fa-heart {
+  display: none;
+}
+
+.fa-regular.fa-heart {
+  font-size: 1, 5rem;
+  color: black;
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+.heart-input:checked ~ .heart .fa-regular.fa-heart {
+  display: none;
+}
+
+.heart-input:checked ~ .heart .fa-solid.fa-heart {
+  display: inline-block;
+  font-size: 1, 5rem;
+  color: transparent;
+  background-image: linear-gradient(#FF79DA, #9356DC);
+  -webkit-background-clip: text;
+  background-clip: text;
 }
 
 footer {
