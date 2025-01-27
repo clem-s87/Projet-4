@@ -9,6 +9,10 @@ h1 {
   font-size: 28px;
 }
 
+h2 {
+  margin: 0px;
+}
+
 p {
   margin: 0px;
 }
@@ -19,6 +23,13 @@ section {
   display: flex;
   flex-direction: column;
   gap: 12px;
+}
+section p {
+  font-size: 14px;
+}
+
+.main-container {
+  background-color: #F6F6F6;
 }
 
 .background__img {
@@ -38,6 +49,9 @@ main {
   top: -55px;
   left: 0px;
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
 }
 
 .titre {
@@ -115,6 +129,59 @@ h2 {
 .menu__nomplats__info {
   display: flex;
   justify-content: space-between;
+}
+
+.menu__bouton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.menu__bouton a {
+  text-decoration: none;
+  background: linear-gradient(#FF79DA, #9356DC);
+  color: #FFFFFF;
+  width: 186px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 25px;
+}
+
+.menu__anim {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu__anim2 {
+  width: 59px;
+  height: 69px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.check-input {
+  display: none;
+}
+
+.check {
+  cursor: pointer;
+  display: inline-block;
+}
+
+.fa-solid.fa-circle-check {
+  display: none;
+}
+
+.fa-solid.fa-circle-check {
+  display: inline-block;
+  color: #99E2D0;
+}
+
+.check-input:checked ~ .check .fa-solid.fa-circle-check {
+  display: none;
 }
 
 /*# sourceMappingURL=restaurants.css.map */
