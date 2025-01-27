@@ -1,0 +1,45 @@
+footer {
+  background-color: #353535;
+  padding-top: 22px;
+  padding-right: 25px;
+  padding-bottom: 22px;
+  padding-left: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  font-family: "Roboto", sans-serif;
+}
+footer p {
+  color: #FFFFFF;
+  margin: 0px;
+}
+footer a {
+  color: #F6F6F6;
+  text-decoration: none;
+}
+
+footer img {
+  width: 137px;
+  height: 27px;
+}
+
+.footer__food {
+  font-family: "Shrikhand", sans-serif;
+  font-size: 18px;
+  color: #FFFFFF;
+}
+
+.footer__icon {
+  display: flex;
+  gap: 5px;
+}
+
+.footer__icon__color {
+  color: #F6F6F6;
+}
+
+.footer__text {
+  padding-left: 7px;
+}
+
+/*# sourceMappingURL=footer.css.map */

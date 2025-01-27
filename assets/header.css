@@ -1,0 +1,15 @@
+.header-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 69px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+  position: relative;
+  z-index: 2;
+}
+.header-logo img {
+  width: 197px;
+  height: 36px;
+}
+
+/*# sourceMappingURL=header.css.map */

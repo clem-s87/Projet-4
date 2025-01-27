@@ -120,6 +120,7 @@ h1 {
   flex-direction: column;
   gap: 20px;
   padding-left: 15px;
+  align-items: center;
 }
 
 .fonctionnement__bouton {
@@ -129,6 +130,7 @@ h1 {
   gap: 30px;
   background-color: #F6F6F6;
   border-radius: 20px;
+  width: 322px;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
 }
 .fonctionnement__bouton i {
@@ -183,6 +185,12 @@ h1 {
   border-top-right-radius: 15px;
   object-fit: cover;
   height: 180px;
+}
+.restaurants a {
+  text-decoration: none;
+}
+.restaurants a:visited {
+  color: inherit;
 }
 
 .restaurant__cards {

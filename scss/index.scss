@@ -154,6 +154,7 @@ h1 {
     flex-direction: column;
     gap: 20px;
     padding-left: 15px;
+    align-items: center;
 }
 
 .fonctionnement__bouton {
@@ -163,6 +164,7 @@ h1 {
     gap: 30px;
     background-color: $background-color-grey;
     border-radius: 20px;
+    width: 322px;
     @include shadow-main(15);
         i {
             @include display-flex;
@@ -215,6 +217,11 @@ h1 {
             border-top-right-radius: 15px;
             object-fit: cover;
             height: 180px;
+        }
+        a {
+            text-decoration: none;
+        } & a:visited {
+            color: inherit;
         }
 }
 

@@ -1,0 +1,18 @@
+@mixin display-flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.header-logo {
+    @include display-flex;
+    height: 69px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+    position: relative;
+    z-index: 2;
+         img {
+            width: 197px;
+            height: 36px;
+    }
+}
