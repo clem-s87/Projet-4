@@ -1,3 +1,137 @@
+// display centré
+
+@mixin display-flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+// couleurs
+
+$main-color: #F6F6F6;
+$second-gradient: linear-gradient(#FF79DA,#9356DC);
+$menu-color: #FFFFFF;
+
+// general
+
 body {
     margin: 0px;
+    font-family: 'Roboto',sans-serif;
+}
+
+h1 {
+    font-family: 'Shrikhand',sans-serif;
+    margin: 0px;
+    font-size: 28px;
+}
+
+p {
+    margin: 0px;
+}
+
+section {
+    padding-left: 10px;
+    padding-right: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+// background img
+
+.background__img {
+    background-image: url('../assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg');
+    width: 100%;
+    height: 275px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+// main
+
+main {
+    background-color: $main-color;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    position: relative;
+    top: -55px;
+    left: 0px;
+    width: 100%;
+}
+
+.titre {
+    @include display-flex;
+    gap: 40px;
+    padding-top: 30px;
+}
+
+.restaurant__icons {
+    @include display-flex;
+        i {
+            font-size: 20px;
+        }
+}
+
+.heart-input {
+    display: none;
+  }
+  
+.heart {
+    cursor: pointer;
+    display: inline-block;
+  }
+
+.fa-solid.fa-heart {
+    display: none;
+  }
+  
+  .fa-regular.fa-heart {
+    font-size: 1,5rem;  
+    color: black;      
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+  
+.heart-input:checked ~ .heart .fa-regular.fa-heart {
+    display: none;  
+  }
+  
+  .heart-input:checked ~ .heart .fa-solid.fa-heart {
+    display: inline-block; 
+    font-size: 1,5rem;
+    color: transparent; 
+    background-image: $second-gradient;  
+    -webkit-background-clip: text;  
+    background-clip: text;  
+  }
+
+//   Entrées
+
+h2 {
+    font-size: 16px;
+    border-bottom: 3px solid #99E2D0;
+    width: 40px;
+    padding-bottom: 4px;
+}
+
+.menu__display {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    background-color: $menu-color;
+    box-shadow: 0px 4.01px 15.04px 0px #0000001A;
+    padding: 15px;
+    border-radius: 15px;
+
+}
+
+.menu__nomplats {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.menu__nomplats__info {
+    display: flex;
+    justify-content: space-between;
 }
