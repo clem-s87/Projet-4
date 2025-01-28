@@ -119,6 +119,8 @@ h2 {
   box-shadow: 0px 4.01px 15.04px 0px rgba(0, 0, 0, 0.1019607843);
   padding: 15px;
   border-radius: 15px;
+  position: relative;
+  overflow: hidden;
 }
 
 .menu__nomplats {
@@ -154,14 +156,6 @@ h2 {
   justify-content: center;
 }
 
-.menu__anim2 {
-  width: 59px;
-  height: 69px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
 .check-input {
   display: none;
 }
@@ -173,15 +167,65 @@ h2 {
 
 .fa-solid.fa-circle-check {
   display: none;
+  color: #FFFFFF;
+  opacity: 0;
+  transition: opacity 300ms ease;
 }
 
-.fa-solid.fa-circle-check {
-  display: inline-block;
-  color: #99E2D0;
+.check-container {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 59px;
+  height: 68px;
+  background-color: #99E2D0;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateX(100%);
+  opacity: 0;
+  transition: transform 300ms ease, opacity 300ms ease;
 }
 
-.check-input:checked ~ .check .fa-solid.fa-circle-check {
-  display: none;
+.check-input:checked + .check .check-container {
+  transform: translateX(0);
+  opacity: 1;
+}
+.check-input:checked + .check .fa-solid.fa-circle-check {
+  display: block;
+  opacity: 1;
+}
+.check-input:checked + .check span {
+  transform: translateX(-60px);
+  transition: transform 300ms ease;
+}
+.check-input:checked + .check .menu__nomplats {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 65%;
+}
+.check-input:checked + .check .menu__nomplats__info__texte {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 210px;
+}
+
+.check-input:not(:checked) + .check .check-container {
+  transform: translateX(100%);
+  opacity: 0;
+  transition: transform 300ms ease, opacity 300ms ease;
+}
+.check-input:not(:checked) + .check .fa-solid.fa-circle-check {
+  opacity: 0;
+  transition: opacity 300ms ease;
+}
+.check-input:not(:checked) + .check span {
+  transform: translateX(0);
+  transition: transform 300ms ease;
 }
 
 /*# sourceMappingURL=restaurants.css.map */
