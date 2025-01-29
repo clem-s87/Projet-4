@@ -93,8 +93,7 @@ h1 {
   padding-top: 30px;
   padding-bottom: 30px;
 }
-
-.sous-header__bouton2 {
+.sous-header__bouton1 a {
   background: linear-gradient(#FF79DA, #9356DC);
   border-radius: 25px;
   height: 50px;
@@ -104,6 +103,11 @@ h1 {
   color: #FFFFFF;
   text-decoration: none;
   width: 218px;
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.2);
+}
+.sous-header__bouton1 :hover {
+  filter: brightness(1.1);
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.45);
 }
 
 .fonctionnement {
@@ -276,48 +280,6 @@ h1 {
   background-image: linear-gradient(#FF79DA, #9356DC);
   -webkit-background-clip: text;
   background-clip: text;
-}
-
-footer {
-  background-color: #353535;
-  padding-top: 22px;
-  padding-right: 25px;
-  padding-bottom: 22px;
-  padding-left: 25px;
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
-footer p {
-  color: #FFFFFF;
-}
-footer a {
-  color: #F6F6F6;
-  text-decoration: none;
-}
-
-footer img {
-  width: 137px;
-  height: 27px;
-}
-
-.footer__food {
-  font-family: "Shrikhand", sans-serif;
-  font-size: 18px;
-  color: #FFFFFF;
-}
-
-.footer__icon {
-  display: flex;
-  gap: 5px;
-}
-
-.footer__icon__color {
-  color: #F6F6F6;
-}
-
-.footer__text {
-  padding-left: 7px;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -35,13 +35,14 @@ footer img {
 
 .footer__icon {
     display: flex;
-    gap: 5px;
+    gap: 11px;
 }
 
 .footer__icon__color {
     color: #F6F6F6;
 }
-
-.footer__text {
-    padding-left: 7px;
+.fa-solid.fa-handshake {
+    font-size: 12px;
+    display: flex;
+    align-items: center;
 }

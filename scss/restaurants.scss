@@ -11,6 +11,20 @@
     justify-content: center;
 }
 
+// keyframe animation menu
+
+$animation-duration: 2s;  
+$animation-delay: 0.6s;  
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0; 
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 // couleurs
 
 $main-color: #F6F6F6;
@@ -50,7 +64,7 @@ section {
 }
 
 .main-container {
-    background-color: #F6F6F6;
+    background-color: $main-color;
 }
 
 // background img
@@ -59,9 +73,9 @@ section {
     background-image: url('../assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg');
     width: 100%;
     height: 275px;
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-position: center;
 }
 
 // main
@@ -71,7 +85,7 @@ main {
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
     position: relative;
-    top: -55px;
+    top: -25px;
     left: 0px;
     width: 100%;
     @include display-column;
@@ -80,8 +94,9 @@ main {
 
 .titre {
     @include display-flex;
-    gap: 40px;
+    gap: 30px;
     padding-top: 30px;
+    padding-left: 5px;
 }
 
 .restaurant__icons {
@@ -97,31 +112,33 @@ main {
   
 .heart {
     cursor: pointer;
-    display: inline-block;
+    position: relative;
+    z-index: 1;
   }
 
+.fa-regular.fa-heart,
 .fa-solid.fa-heart {
-    display: none;
+    transition: opacity 250ms ease;
+    font-size: 1.5rem;
+}
+
+.fa-solid.fa-heart {
+    opacity: 0;  
+    position: relative;
+    left: -28px;
+    
   }
   
   .fa-regular.fa-heart {
-    font-size: 1,5rem;  
     color: black;      
-    display: inline-block;
-    transition: all 0.3s ease;
-}
-  
-.heart-input:checked ~ .heart .fa-regular.fa-heart {
-    display: none;  
-  }
-  
+    opacity: 1;
+} 
   .heart-input:checked ~ .heart .fa-solid.fa-heart {
-    display: inline-block; 
-    font-size: 1,5rem;
     color: transparent; 
     background-image: $second-gradient;  
     -webkit-background-clip: text;  
-    background-clip: text;  
+    background-clip: text; 
+    opacity: 1; 
   }
 
 //   Menu
@@ -155,24 +172,13 @@ h2 {
     justify-content: space-between;
 }
 
-.menu__bouton {
-    @include display-flex;
-        a {
-            text-decoration: none;
-            background: $second-gradient;
-            color: #FFFFFF;
-            width: 186px;
-            height: 50px;
-            @include display-flex;
-            border-radius: 25px;
-        }
-}
-
 .menu__anim {
     display: flex;
     align-items: center;
     justify-content: center;
 }
+
+// animations css
 
 .check-input {
     display: none;
@@ -185,7 +191,7 @@ h2 {
 
 .fa-solid.fa-circle-check {
     display: none;
-    color: #FFFFFF;
+    color: $menu-color;
     opacity: 0;
     transition: opacity 300ms ease;
 }
@@ -196,7 +202,7 @@ h2 {
     right: 0;
     top: 0;
     width: 59px;
-    height: 68px;
+    height: 70px;
     background-color: #99E2D0;
     border-top-right-radius: 15px;
     border-bottom-right-radius: 15px;
@@ -219,7 +225,7 @@ h2 {
         opacity: 1; 
     }    
 
-    span {
+    .menu__prix {
         transform: translateX(-60px); 
         transition: transform 300ms ease;
     }
@@ -250,11 +256,56 @@ h2 {
         transition: opacity 300ms ease; 
     }
 
-    span {
+    .menu__prix {
         transform: translateX(0); 
         transition: transform 300ms ease;
     }
 }
+
+section {
+    opacity: 0;
+    animation: fadeInUp $animation-duration ease-out forwards;
+    &:nth-child(1) {
+        animation-delay: 0s;
+      }
+    
+      &:nth-child(2) {
+        animation-delay: 0.3s;
+      }
+    
+      &:nth-child(3) {
+        animation-delay: 0.6s;
+      }
+      &:nth-child(4) {
+        animation-delay: 0.9s;
+      }
+}
+
+.menu__bouton {
+    @include display-flex;
+    padding-bottom: 15px;
+        a {
+            text-decoration: none;
+            background: $second-gradient;
+            color: $menu-color;
+            width: 186px;
+            height: 50px;
+            @include display-flex;
+            border-radius: 25px;
+            box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.20);
+        }
+        a:hover {
+            filter: brightness(1.1);
+            box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.45);
+
+        }
+    }
+
+
+
+    
+
+    
 
 
 

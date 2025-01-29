@@ -125,18 +125,23 @@ h1 {
     @include display-flex;
     padding-top: 30px;
     padding-bottom: 30px;
+      a {
+        background: $second-gradient;
+        border-radius: 25px;
+        height: 50px;
+        @include display-flex;
+        color: #FFFFFF;
+        text-decoration: none;
+        width: 218px;
+        box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.20);
+        }
+      & :hover {
+        filter: brightness(1.1);
+            box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.45);
+    }
 }
 
-.sous-header__bouton2 {
-    background: $second-gradient;
-    border-radius: 25px;
-    height: 50px;
-    @include display-flex;
-    color: #FFFFFF;
-    text-decoration: none;
-    width: 218px;
-    
-}
+
 
 // fonctionnement
 
@@ -308,47 +313,3 @@ h1 {
     -webkit-background-clip: text;  
     background-clip: text;  
   }
-
-// Footer
-
-footer {
-    background-color: $color-text;
-    padding-top: 22px;
-    padding-right: 25px;
-    padding-bottom: 22px;
-    padding-left: 25px;
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-            p {
-            color: #FFFFFF;
-        }
-            a {
-                color: #F6F6F6;
-                text-decoration: none;
-            }
-}
-
-footer img {
-    width: 137px;
-    height: 27px;
-}
-
-.footer__food {
-    font-family: 'Shrikhand',sans-serif;
-    font-size: 18px;
-    color: #FFFFFF;
-}
-
-.footer__icon {
-    display: flex;
-    gap: 5px;
-}
-
-.footer__icon__color {
-    color: #F6F6F6;
-}
-
-.footer__text {
-    padding-left: 7px;
-}
