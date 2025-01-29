@@ -1,3 +1,4 @@
+@charset "UTF-8";
 header {
   display: flex;
   justify-content: center;
@@ -25,6 +26,25 @@ header a i {
 .header-logo img {
   width: 197px;
   height: 36px;
+}
+
+/* Le code ci-dessous correspond à la version responsive uniquement */
+/****** Media queries ***********/
+/* Desktop (desktop more than 1024px) */
+@media screen and (min-width: 1024px) {
+  header {
+    width: 100%;
+    height: 69px;
+    display: flex;
+    align-items: flex-end;
+  }
+  header a {
+    top: 40px;
+  }
+  .header-logo {
+    display: flex;
+    align-items: flex-end;
+  }
 }
 
 /*# sourceMappingURL=header.css.map */

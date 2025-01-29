@@ -46,3 +46,15 @@ footer img {
     display: flex;
     align-items: center;
 }
+
+    /* Le code ci-dessous correspond à la version responsive uniquement */
+
+/****** Media queries ***********/
+/* Desktop (desktop more than 1024px) */
+@media screen and (min-width: 1024px){
+
+footer {
+    width: 100%;
+}
+
+}

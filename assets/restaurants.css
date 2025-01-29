@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @keyframes fadeInUp {
   0% {
     opacity: 0;
@@ -31,9 +32,6 @@ section {
   display: flex;
   flex-direction: column;
   gap: 12px;
-}
-section p {
-  font-size: 14px;
 }
 
 .main-container {
@@ -133,21 +131,26 @@ h2 {
   position: relative;
   overflow: hidden;
 }
-
-.menu__nomplats {
+.menu__display .menu__nomplats {
   font-weight: bold;
   font-size: 18px;
+  display: inline-block;
 }
-
-.menu__nomplats__info {
+.menu__display .menu__nomplats__info {
   display: flex;
   justify-content: space-between;
 }
-
-.menu__anim {
+.menu__display .menu__nomplats__info .menu__nomplats__info__texte {
+  font-size: 14px;
+  display: inline-block;
+}
+.menu__display .menu__anim {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.menu__display .menu__anim .menu__prix {
+  font-weight: bold;
 }
 
 .check-input {
@@ -171,7 +174,7 @@ h2 {
   right: 0;
   top: 0;
   width: 59px;
-  height: 70px;
+  height: 74px;
   background-color: #99E2D0;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
@@ -205,7 +208,7 @@ h2 {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  max-width: 210px;
+  max-width: 70%;
 }
 
 .check-input:not(:checked) + .check .check-container {
@@ -260,6 +263,41 @@ section:nth-child(4) {
 .menu__bouton a:hover {
   filter: brightness(1.1);
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.45);
+}
+
+/* Le code ci-dessous correspond à la version responsive uniquement */
+/****** Media queries ***********/
+/* Desktop (desktop more than 1024px) */
+@media screen and (min-width: 1024px) {
+  .main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #FFFFFF;
+  }
+  main {
+    width: 70%;
+    top: 0px;
+  }
+  .background__img {
+    height: 380px;
+    position: relative;
+    bottom: -20px;
+  }
+  section {
+    display: flex;
+    align-items: center;
+  }
+  h2 {
+    position: relative;
+    left: -311px;
+  }
+  .menu__display {
+    width: 634px;
+  }
+  .menu__bouton {
+    padding-bottom: 45px;
+  }
 }
 
 /*# sourceMappingURL=restaurants.css.map */
