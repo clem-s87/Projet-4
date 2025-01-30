@@ -313,3 +313,14 @@ h1 {
     -webkit-background-clip: text;  
     background-clip: text;  
   }
+
+      /* Le code ci-dessous correspond à la version responsive uniquement */
+
+/****** Media queries ***********/
+/* Desktop (desktop more than 1024px) */
+
+@media screen and (min-width: 1024px) {
+    h1 {
+        font-size: 40px;
+    }
+}

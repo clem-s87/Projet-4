@@ -159,7 +159,9 @@ h2 {
 
 .check {
   cursor: pointer;
-  display: inline-block;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
 }
 
 .fa-solid.fa-circle-check {
