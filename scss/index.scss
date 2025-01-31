@@ -340,7 +340,7 @@ h1 {
         gap: 30px;
     }
     .fonctionnement__bouton {
-        gap: 25px;
+        gap: 20px;
         width: 29%;
     }
     .restaurants {
@@ -348,6 +348,9 @@ h1 {
         flex-direction: column;
         padding-bottom: 25px;
     
+    }
+    .restaurant__cards__display {
+        gap: 50px;
     }
     .restaurant__display {
         display: flex;
