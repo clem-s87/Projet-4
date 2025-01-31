@@ -290,6 +290,46 @@ h1 {
   h1 {
     font-size: 40px;
   }
+  .fonctionnement {
+    padding-left: 0px;
+    padding-right: 0px;
+    align-items: center;
+  }
+  .fonctionnement__container {
+    width: 85%;
+    position: relative;
+    left: 18px;
+  }
+  .fonctionnement__display {
+    display: flex;
+    flex-direction: row;
+    padding-left: 0px;
+    gap: 30px;
+  }
+  .fonctionnement__bouton {
+    gap: 25px;
+    width: 29%;
+  }
+  .restaurants {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding-bottom: 25px;
+  }
+  .restaurant__display {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    width: 85%;
+  }
+  .restaurant__cards__nouveau {
+    display: flex;
+    gap: 100px;
+  }
+  .restaurant__cards__nouveau a {
+    width: 45%;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
