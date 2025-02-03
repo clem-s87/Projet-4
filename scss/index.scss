@@ -342,7 +342,6 @@ h1 {
     justify-content: space-between;
     padding-left: 10px;
     padding-top: 10px;
-    padding-right: 20px;
     padding-bottom: 20px;
 }
 
@@ -365,32 +364,32 @@ h1 {
   
 .heart {
     cursor: pointer;
-    display: inline-block;
+    position: relative;
+    z-index: 1;
   }
+
+.fa-regular.fa-heart,
+.fa-solid.fa-heart {
+    transition: opacity 250ms ease;
+    font-size: 1.5rem;
+}
 
 .fa-solid.fa-heart {
-    display: none;
+    opacity: 0;  
+    position: relative;
+    left: -28px;
+    
   }
   
-  .fa-regular.fa-heart {
-    font-size: 1,5rem;  
-    color: black;      
-    display: inline-block;
-    transition: all 0.3s ease;
-}
-  
-
-.heart-input:checked ~ .heart .fa-regular.fa-heart {
-    display: none;  
-  }
-  
+  .fa-regular.fa-heart {    
+    opacity: 1;
+} 
   .heart-input:checked ~ .heart .fa-solid.fa-heart {
-    display: inline-block; 
-    font-size: 1,5rem;
     color: transparent; 
     background-image: $second-gradient;  
     -webkit-background-clip: text;  
-    background-clip: text;  
+    background-clip: text; 
+    opacity: 1; 
   }
 
       /* Le code ci-dessous correspond à la version responsive uniquement */
@@ -406,6 +405,7 @@ h1 {
         padding-left: 0px;
         padding-right: 0px;
         align-items: center;
+        padding-top: 20px;
     }
     .fonctionnement__container {
         width: 85%;

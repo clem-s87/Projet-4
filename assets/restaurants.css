@@ -39,12 +39,27 @@ section {
 }
 
 .background__img {
-  background-image: url("../assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
   width: 100%;
   height: 275px;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+}
+
+.image__palette {
+  background-image: url("../assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
+}
+
+.image__note {
+  background-image: url(../assets/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg);
+}
+
+.image__française {
+  background-image: url(../assets/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg);
+}
+
+.image__delice {
+  background-image: url(../assets/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg);
 }
 
 main {
@@ -101,7 +116,6 @@ main {
 }
 
 .fa-regular.fa-heart {
-  color: black;
   opacity: 1;
 }
 
@@ -299,6 +313,27 @@ section:nth-child(4) {
   }
   .menu__bouton {
     padding-bottom: 45px;
+  }
+  .check {
+    cursor: default;
+  }
+  .check-input {
+    display: none;
+  }
+  .check {
+    pointer-events: none;
+  }
+  .check-input:hover + .check .check-container {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  .check-input:hover + .check .fa-solid.fa-circle-check {
+    display: block;
+    opacity: 1;
+  }
+  .check-input:hover + .check .menu__prix {
+    transform: translateX(-60px);
+    transition: transform 300ms ease;
   }
 }
 
