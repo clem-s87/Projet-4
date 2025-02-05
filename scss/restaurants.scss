@@ -364,18 +364,6 @@ h2 {
     padding-bottom: 45px;
 }
 
-.check {
-    cursor: default;
-}
-
-.check-input {
-    display: none;
-}
-
-.check {
-    pointer-events: none;
-}
-
 .check-input:hover + .check {
     .check-container {
         transform: translateX(0); 

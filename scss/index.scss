@@ -281,7 +281,7 @@ h1 {
 
 // Restaurants
 
-.restaurants {
+.restaurant {
     padding-left: 17px;
     padding-right: 17px;
     padding-bottom: 60px;
@@ -306,66 +306,70 @@ h1 {
         } & a:visited {
             color: inherit;
         }
-}
 
-.restaurant__cards {
-    display: flex;
-    flex-direction: column;
-    @include shadow-main(10);
-    border-radius: 15px;
-}
 
-.restaurant__cards__display {
-    display: flex;
-    flex-direction: column;
-    gap: 17px;
-}
+        &__display {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
 
-.restaurant__cards__nouveau {
-    position: relative;
-}
+        &__cards {
+            display: flex;
+            flex-direction: column;
+            @include shadow-main(10);
+            border-radius: 15px;
+            position: relative;
 
-.restaurant__nouveau {
-    position: absolute; 
-      top: 4%; 
-      right: 4%; 
-      background-color: #99E2D0; 
-      color: #008766; 
-      padding: 5px 10px; 
-      font-size: 14px; 
-      border-radius: 5px; 
-      font-weight: bold;
-}
+            &__display {
+                display: flex;
+                flex-direction: column;
+                gap: 17px;
+            }
 
-.restaurant__text {
-    display: flex;
-    justify-content: space-between;
-    padding-left: 10px;
-    padding-top: 10px;
-    padding-bottom: 20px;
-}
+            &____nouveau {
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+            }
+        }
 
-.restaurant__text__display {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-}
+        &__nouveau {
+        position: absolute; 
+        top: 4%; 
+        right: 4%; 
+        background-color: #99E2D0; 
+        color: #008766; 
+        padding: 5px 10px; 
+        font-size: 14px; 
+        border-radius: 5px; 
+        font-weight: bold;
+        }
 
-.restaurant__icons {
-    @include display-flex;
-        i {
-            font-size: 20px;
+        &__text {
+            display: flex;
+            justify-content: space-between;
+            padding-left: 10px;
+            padding-top: 10px;
+            padding-bottom: 15px;
+
+                &__display {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 5px;
+                }
+        }
+
+        &__icons {
+            position: absolute;
+            top: 78%;
+            left: 82%;
         }
 }
 
 .heart-input {
     display: none;
-  }
-  
-.heart {
-    cursor: pointer;
-    position: relative;
-    z-index: 1;
   }
 
 .fa-regular.fa-heart,
@@ -401,47 +405,52 @@ h1 {
     h1 {
         font-size: 40px;
     }
-    .fonctionnement {
+.fonctionnement {
         padding-left: 0px;
         padding-right: 0px;
         align-items: center;
         padding-top: 20px;
-    }
-    .fonctionnement__container {
+    
+    &__container {
         width: 85%;
         position: relative;
         left: 18px;
     }
-    .fonctionnement__display {
+    &__display {
         display: flex;
         flex-direction: row;
         padding-left: 0px;
         gap: 30px;
     }
-    .fonctionnement__bouton {
+    &__bouton {
         gap: 20px;
         width: 29%;
     }
-    .restaurants {
+}
+.restaurant {
         @include display-flex;
         flex-direction: column;
         padding-bottom: 25px;
-    
-    }
-    .restaurant__cards__display {
-        gap: 50px;
-    }
-    .restaurant__display {
-        display: flex;
+        
+        &__cards {
+            width: 100%;
+            
+            &__display {
+                gap: 50px;
+            flex-direction: row;
+            }
+
+            &__nouveau {
+                flex-direction: row;
+                gap: 100px;
+            }
+        }
+        
+        &__display {
+            display: flex;
         flex-direction: column;
         gap: 40px;
         width: 85%;
-    }
-    .restaurant__cards__nouveau {
-        display: flex;
-        gap: 100px;
-            a {
-                width: 45%;
-            }
-    }
+        }
+}
 }
